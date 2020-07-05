@@ -342,11 +342,11 @@ div[class^='bubble-']:after {
 
 .active {
   color: #ffffff !important;
-  text-shadow: 3px 3px 7px darkturquoise;
+  text-shadow: 0px 0px 7px darkturquoise;
 }
 
 .main-content {
-  padding: 50px 70px 50px 30px;
+  padding: 40px 70px 40px 30px;
   max-width: 600px;
   margin: auto;
   position: relative;
@@ -370,5 +370,65 @@ div[class^='bubble-']:after {
   line-height: 1.6;
   letter-spacing: 1px;
   margin-top: 20px;
+  font-weight: 200;
 }
 /*# sourceMappingURL=style.css.map */
+
+.list-box {
+  margin-bottom: 10px;
+}
+
+.list-title {
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  color: #c2f2ff;
+  letter-spacing: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.box-content {
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.price-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+.price-title {
+  font-size: 22px;
+}
+
+.high {
+  text-decoration: line-through;
+}
+
+.low {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.info {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0px 5px;
+}
