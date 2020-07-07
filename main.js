@@ -28,9 +28,7 @@ $('span').on('keyup', (e) => {
       t.text('')
       step = 1
     } else if (step == 1 && phoneNumber.length > 0) {
-      l.after(
-        `<li>｡◕◡◕｡)ﾉ 非常感谢，有什麼疑惑或感興趣的項目嗎？歡迎告訴我們，`
-      )
+      l.after(`<li>｡◕◡◕｡)ﾉ 非常感谢，有什麼疑惑或感興趣的項目嗎？歡迎告訴我們`)
       t.text('')
       step = 2
     } else if (step == 2 && comment.length > 0) {
