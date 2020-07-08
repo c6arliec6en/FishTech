@@ -375,7 +375,6 @@ div[class^='bubble-']:after {
   line-height: 1.6;
   letter-spacing: 1px;
   margin-top: 20px;
-  font-weight: 200;
 }
 /*# sourceMappingURL=style.css.map */
 
@@ -401,19 +400,18 @@ div[class^='bubble-']:after {
   border-radius: 5px;
 }
 .price-box {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   padding: 5px 10px;
   box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.7);
-  font-weight: 200;
+  color: rgba(255, 255, 255, 0.9);
   letter-spacing: 1px;
 }
 
 .price-box:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 1);
   transform: scale(1.02);
 }
 
@@ -437,16 +435,24 @@ div[class^='bubble-']:after {
 }
 
 .info {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
   padding: 0px 5px;
+}
+
+.white {
+  color: #fff;
 }
 
 /********* portfolio *********/
 .carousel-wrapper {
   position: absolute;
   left: 0;
-  margin-top: 50px;
+  margin-top: 40px;
+}
+.click {
+  padding: 0px 0px 10px 30px;
+  color: #fff;
 }
 
 .carousel-caption {
@@ -512,4 +518,14 @@ center {
   .main-content {
     padding: 50px 0px;
   }
+}
+
+.modal-body > div {
+  text-align: center;
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.modal-body > div:nth-child(8) {
+  border: none;
 }
