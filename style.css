@@ -371,7 +371,7 @@ div[class^='bubble-']:after {
 
 .section-content {
   color: #ffffff;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
   letter-spacing: 1px;
   margin-top: 20px;
@@ -416,7 +416,7 @@ div[class^='bubble-']:after {
 }
 
 .price-title {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .high {
@@ -435,13 +435,23 @@ div[class^='bubble-']:after {
 }
 
 .info {
-  font-size: 18px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
   padding: 0px 5px;
 }
 
 .white {
   color: #fff;
+}
+
+.modal-body > div {
+  text-align: center;
+  padding: 15px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.modal-body > div:nth-child(8) {
+  border: none;
 }
 
 /********* portfolio *********/
@@ -494,12 +504,7 @@ li {
   text-shadow: 0 0 14px #5d9293;
   padding-bottom: 10px;
 }
-center {
-  font-size: 10px;
-  color: #666;
-  display: block;
-  margin-top: 200px;
-}
+
 .blinker {
   opacity: 0.1;
 }
@@ -512,20 +517,39 @@ center {
   display: block;
 }
 
+.more-info {
+  color: #b0fdff;
+  padding: 0px 30px;
+  position: absolute;
+  bottom: 150px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.inner-more-info {
+  max-width: 600px;
+  margin: auto;
+}
+
+.inner-more-info > div > span {
+  text-transform: lowercase !important;
+  margin-left: 5px;
+}
+
 /*****************************/
 
 @media screen and (min-width: 768px) {
   .main-content {
     padding: 50px 0px;
   }
-}
 
-.modal-body > div {
-  text-align: center;
-  padding: 15px 0px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-}
+  .section-content {
+    font-size: 20px;
+    line-height: 1.7;
+  }
 
-.modal-body > div:nth-child(8) {
-  border: none;
+  .click {
+    padding: 0px 0px 10px 0px;
+  }
 }
