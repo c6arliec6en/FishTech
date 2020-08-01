@@ -4,6 +4,7 @@ const form = document.querySelector('#contact-form')
 const input = document.querySelectorAll('.c-input')
 const text = document.querySelector('.c-text')
 
+
 form.addEventListener('submit', () => {
   event.preventDefault()
 
@@ -12,11 +13,12 @@ form.addEventListener('submit', () => {
   const phone = input[2].value
 
   if (!name) {
-    alert('請填入姓名或公司名稱')
+    // alert('請填入姓名或公司名稱')
+    swal("請填入姓名/公司名稱", "", "warning", { button: "好的/Okey" })
   } else if (!email) {
-    alert('請填入Email方便我們與您聯絡')
+    swal("請填入Email方便我們與您聯絡", "", "warning", { button: "好的/Okey" })
   } else if (!text.value) {
-    alert('請留下您的需求，我們將盡快與您聯絡！')
+    swal("請留下您的需求或任何建議", "", "warning", { button: "好的/Okey" })
   } else {
 
     var template_params = {
@@ -30,8 +32,8 @@ form.addEventListener('submit', () => {
     var template_id = "demand";
     emailjs.send(service_id, template_id, template_params);
 
+    swal("我們將盡快與您聯絡！", "", "success", { button: "好的/Okey" })
+
   }
-
-
 
 })
