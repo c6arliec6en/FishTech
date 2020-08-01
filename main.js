@@ -12,11 +12,11 @@ form.addEventListener('submit', () => {
   const phone = input[2].value
 
   if (!name) {
-    console.log('name cant be empty')
+    alert('請填入姓名或公司名稱')
   } else if (!email) {
-    console.log('Email cant be empty')
+    alert('請填入Email方便我們與您聯絡')
   } else if (!text.value) {
-    console.log('info cant be empty')
+    alert('請留下您的需求，我們將盡快與您聯絡！')
   } else {
 
     var template_params = {
@@ -31,5 +31,7 @@ form.addEventListener('submit', () => {
     emailjs.send(service_id, template_id, template_params);
 
   }
+
+
 
 })
