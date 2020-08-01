@@ -37,6 +37,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css" />
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function () {
+        emailjs.init("user_szuE2HqGkgRdi8LPJb3xU");
+      })();
+  </script>
 </head>
 
 <body data-spy="scroll" data-offset="50" data-target="#sidebar">
@@ -222,10 +229,10 @@
           </div>
         </div>
         <div class="info">
-          ＊以上皆含 6 個月內 2 次免費技術支援，後續不收取任何維護費用。
+          ＊以上皆含 6 個月內 2 次免費技術支援，6 個月後沉於科技將對技術支援酌收額外費用。
           <br />
           <br />
-          ＊如需本公司定期維護與修改網站，將會依據您的需求每年酌收主機托管與網頁修改的費用，詳細資訊請來電洽詢。
+          ＊工作室提供定期維護合約，合約期間能夠協助提供技術支援/版面微調/內容調整等，詳細資訊歡迎來信或來電洽詢。
         </div>
       </div>
     </section>
@@ -296,20 +303,28 @@
           Contact us
         </div>
         <div class="wrap">
-          <ul>
-            <li>先不管我們有沒有打動你，請輸入大名</li>
-          </ul>
-          <span contenteditable="true"> </span><b class="blink">|</b>
+          <form id="contact-form">
+            <p class="c-font">姓名</p>
+            <input type="text" id='name' name="name" class="c-input">
+            <p class="c-font">Email</p>
+            <input type="email" id='email' name="email" class="c-input">
+            <p class="c-font">聯絡電話</p>
+            <input type="text" id='phone' name="phone" class="c-input">
+            <p class="c-font">留言</p>
+            <textarea name="info" id='info' class="c-text"></textarea>
+
+            <button type="submit" class="c-botton">送出</button>
+          </form>
         </div>
       </div>
       <div class="more-info">
         <div class="inner-more-info">
-          <div>我是YZ，歡迎聊聊</div>
+          <div>聯絡電話</div>
           <div>
-            <i class="fas fa-phone-square"></i><span>0982-184-012</span>
+            <i class="fas fa-phone-square"></i><span>0982-184-012 Walle</span>
           </div>
           <div>
-            <i class="fab fa-line"></i></i><span>chosanna0606</span>
+            <i class="fas fa-phone-square"></i><span>0978-832-795 Charlie</span>
           </div>
         </div>
       </div>
@@ -402,7 +417,7 @@
       </div>
     </div>
   </div>
-
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="main.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
