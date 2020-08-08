@@ -467,18 +467,20 @@ div[class^='bubble-']:after {
 
 .carousel-caption {
   color: #fff !important;
-  bottom: 0px;
+  bottom: 40%;
   text-shadow: none;
   background-color: rgba(0, 0, 0, 0.7);
   right: 0;
   left: 0;
-  width: 100%;
-  padding: 10px 0px;
+  width: 35%;
+  border-radius: 50px;
+  margin:0 auto;
+  padding: 10px 5px;
 }
 
 .carousel-caption > div {
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 /******** Contact us *********/
@@ -558,6 +560,15 @@ span {
   margin-left: 5px;
 }
 
+.carousel-control-prev{
+  width:15%;
+  background-color: black;
+}
+
+.carousel-control-next{
+  width:15%;
+  background-color: black;
+}
 
 /*****************************/
 
@@ -574,4 +585,19 @@ span {
   .click {
     padding: 0px 0px 10px 0px;
   }
+
+  .carousel-caption > div {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .carousel-control-prev{
+    width:10%;
+  }
+
+  .carousel-control-next{
+    width:10%
+  }
+
 }
+
