@@ -49,7 +49,7 @@ const loadMore = () => {
 const fetchTargetData = (targetData) => {
   targetData.slice(dataCount, dataCount + 24).forEach((item) => {
     template.innerHTML += `
-        <a href="./model.html?number=${item.id}" class="col-sm-6 col-md-4 lazy" target="_blank">
+        <a href="https://zen-yu.com.tw/model?number=${item.id}" class="col-sm-6 col-md-4 lazy" target="_blank">
           <img src="${item.img}">
            <div class="tag">${item.name}</div>
         </a>
