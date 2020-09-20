@@ -26,35 +26,29 @@ fetch(cors + BASE_URL)
   .then((myJson) => {
     data.push(...myJson)
     data.sort((a, b) => a.id - b.id)
-    fetchTargetData(data)
     let removeTarget = document.querySelector('.text-center')
     removeTarget.remove()
-  })
+    const urlParams = new URLSearchParams(window.location.search);
+    const number = urlParams.get('number')
 
-  .then(() => {
-    document.querySelectorAll('.lazy').forEach((element) => io.observe(element))
-  })
+    const iframe = data.find(a => a.id === parseInt(number))
 
-const handleScroll = () => {
-  if (window.scrollY + window.screen.height >= document.body.scrollHeight) {
-    loadMore()
-  }
-}
+    console.log(iframe.preview)
 
-const loadMore = () => {
-  dataCount += 24
-  fetchTargetData(data)
-}
 
-const fetchTargetData = (targetData) => {
-  targetData.slice(dataCount, dataCount + 24).forEach((item) => {
-    template.innerHTML += `
-        <a href="./model.html?number=${item.id}" class="col-sm-6 col-md-4 lazy" target="_blank">
-          <img src="${item.img}">
-           <div class="tag">${item.name}</div>
-        </a>
+    const iframeHTML = `
+      <iframe src="${iframe.preview}" width="100%" height="1000px" frameborder="1" scrolling="yes"></iframe>
     `
-  })
-}
 
-window.addEventListener('scroll', handleScroll)
+    const i = document.querySelector(".iframe")
+
+    i.innerHTML = iframeHTML
+
+  })
+
+
+
+
+
+
+

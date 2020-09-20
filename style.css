@@ -570,6 +570,16 @@ span {
   background-color: black;
 }
 
+.navbar-nav { 
+    width: 100%; 
+    text-align: center; 
+}
+ 
+.navbar-nav > li { 
+     float: none; 
+     display: inline-block; 
+} 
+
 /*****************************/
 
 @media screen and (min-width: 768px) {
