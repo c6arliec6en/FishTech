@@ -1,0 +1,13 @@
+<IFModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteRule ^index\.html$ / [R=301,L]
+
+		#redirect /file.php to /file
+		RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+		RewriteRule ^ /%1 [NE,L,R]
+		# now we will internally map /file to /file.php
+		RewriteCond %{REQUEST_FILENAME}.html -f
+		RewriteRule ^(.*)/?$ /$1.html  [L]
+</IFModule>
