@@ -1,4 +1,4 @@
-const cors = 'https://cors-anywhere.herokuapp.com/'
+// const cors = 'https://cors-anywhere.herokuapp.com/'
 const BASE_URL = 'http://54.178.36.181:3000/'
 const template = document.getElementById('template')
 const data = []
@@ -19,7 +19,7 @@ const loader = `
 const body = document.querySelector('.row')
 body.innerHTML = loader
 
-fetch(cors + BASE_URL)
+fetch(BASE_URL)
   .then((response) => {
     return response.json()
   })
